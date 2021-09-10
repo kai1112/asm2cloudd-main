@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoys Store</title>
+</head>
+
+<style>
+    body {
+        font-size: 20px;
+        line-height: 1.2;
+        content: center;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    #top {
+        /*bên trên đầu của trang web*/
+        width: 760px;
+        height: 40px;
+    }
+
+    .top1 {
+        /*bên trên đầu bên trong id top*/
+        line-height: 5px;
+        height: 40px;
+        margin: 0px;
+        background-color: aquamarine;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .img {
+        width: 40px;
+        height: 40px;
+        float: left;
+        display: block;
+    }
+
+    #main {
+        /*div dưới top*/
+        width: 760px;
+        /*chiều rồng*/
+        height: 20px;
+        /*chiều cao*/
+    }
+
+
+    .mainright {
+        /*main ở giữa*/
+        width: 760px;
+        height: auto;   
+        margin-left: 200px;
+    }
+
+    .new {
+        padding: auto;
+        margin-left: 160px;
+    }
+
+
+    #button {
+        /*thẻ div dưới cùng của bố cục*/
+        background: lightsalmon;
+        width: 760px;
+        height: 50px;
+        float: left;
+    }
+
+    #button a {
+        padding: 0px;
+        text-align: center;
+        line-height: 25px;
+        display: block;
+        list-style: none;
+        text-decoration: none;
+    }
+    .host{
+        color: white;
+        text-align: center;
+        margin: 0px;
+        padding: auto;
+        display: block;
+    }
+</style>
+
+<body>
+    <div>
+        <div id="top">
+            <div class="top1">
+                <ul>
+                    <img src="https://vn-live-03.slatic.net/p/52059da1160b3aa548cc7ac868f53d6a.jpg" alt="" class="img">
+                    <h1 class="store">Toys Store</h1>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <br>
+            <div class="mainright">
+                <a href="/insert" class="new"><input type="submit" value="Add new product"></a>
+                <div id="duc">
+                    <ul>
+                        <table border="1" style="width: 300px;">
+                            <tr align="center">
+                                <td style="width: 200px;">names product</td>
+                                <td style="width: 100px;">price</td>
+                                <td style="width: 100px;">id</td>
+                                <td style="width: 100px;">color</td>
+                            </tr>
+                            {{#each model}}
+                            <tr align="center">
+                                <td style="width: 50px;">{{name}}</td>
+                                <td style="width: 50px;">{{price}}</td>
+                                <td style="width: 50px;">{{productcode}}</td>
+                                <td style="width: 50px;">{{color}}</td>
+                                {{!-- <td>{{first}}</td> --}}
+                                <td><a href="/delete?id={{_id}}"><input type="submit" value="delete" id=""></a></td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </ul>
+                </div>
+            </div>
+            <div id="button">
+                <a href="https://www.facebook.com/">Liên hệ facebook</a>
+                <h3 class="host">Hotline: 0346358843</h3>
+            </div>
+        </div>
+
+
+        <br>
+
+    </div>
+
+</body>
+
+</html>
